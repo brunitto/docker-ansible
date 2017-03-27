@@ -15,7 +15,7 @@ Change the working directory to your playbooks directory and execute:
 
 It's also a good idea to copy your SSH private keys to the container:
 
-    $ docker run --rm -v "$(pwd):/src" -v "~/.ssh/id_rsa:/root/.ssh/id_rsa brunitto/ansible
+    $ docker run --rm -v "$(pwd):/src" -v "~/.ssh/id_rsa:/root/.ssh/id_rsa" brunitto/ansible
 
 This image use `CMD ["bash"]` in the Dockerfile to start the container with a
 bash session. As the entrypoint for `debian` image is `/bin/sh -c`, the
